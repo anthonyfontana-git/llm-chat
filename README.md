@@ -31,8 +31,14 @@ claude> A hash map stores key-value pairs and uses a hash function ...
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
-export ANTHROPIC_API_KEY=sk-ant-...   # from https://platform.claude.com
 ```
+
+Then give it credentials. Either way works:
+
+- **Sign in** (no key to manage): install the [`ant` CLI](https://github.com/anthropics/anthropic-cli) and run
+  `ant auth login`. The SDK picks up the sign-in automatically.
+- **API key**: create one at https://platform.claude.com and `export ANTHROPIC_API_KEY=sk-ant-...`
+  (if set, it takes priority over the sign-in).
 
 ## Usage
 

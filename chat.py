@@ -178,8 +178,10 @@ def ask(session: ChatSession, text: str) -> bool:
         if "authentication" not in str(e):
             raise
         print(
-            "No API credentials found. Create a key at https://platform.claude.com "
-            "and run:\n  export ANTHROPIC_API_KEY=sk-ant-...",
+            "No API credentials found. Either sign in with the ant CLI:\n"
+            "  ant auth login\n"
+            "or create a key at https://platform.claude.com and run:\n"
+            "  export ANTHROPIC_API_KEY=sk-ant-...",
             file=sys.stderr,
         )
         return False
